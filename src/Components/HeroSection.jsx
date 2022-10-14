@@ -3,10 +3,12 @@ import { NavLink } from 'react-router-dom';
 import {Button} from '../Components/Button';
 import styled from 'styled-components';
 import {useGlobalContext} from '../assets/Context';
+import home from '../images/hero.svg';
 
 const HeroSection = ({title, btn}) => {
 
     const {details, image}=useGlobalContext();
+    //console.log(image);
 
   return (
     <Wrapper>
@@ -24,7 +26,7 @@ const HeroSection = ({title, btn}) => {
 
          <div className='section-hero-image'>
             <picture>
-                <img src={image}  className='hero-img' alt="hero svg image" />
+                <img src={home}  className='hero-img' alt="hero svg image" />
             </picture>
          </div>
        </div>

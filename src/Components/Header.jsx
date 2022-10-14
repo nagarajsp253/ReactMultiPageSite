@@ -2,13 +2,14 @@ import React from 'react'
 import {NavLink} from 'react-router-dom';
 import Navbar from './Navbar';
 import styled from "styled-components";
+import logo from '../images/logo.webp';
 
 const Header = () => {
   return (
     <>
       <MainHeader>
          <NavLink to="/">
-            <img src="../images/logo.webp" width="400" alt="Logo" className='logo'/>
+            <img src={logo} width="400" alt="Logo" className='logo'/>
          </NavLink>
          <Navbar/>
       </MainHeader>

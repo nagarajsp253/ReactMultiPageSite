@@ -1,5 +1,7 @@
 import { createContext, useContext, useEffect, useReducer } from "react";
 import reducer from '../reducer';
+import home from '../images/logo.webp';
+import about from '../images/about1.svg';
 
 const API="https://thapareactapi.up.railway.app";
 const AppContext=createContext();
@@ -19,7 +21,7 @@ const AppProvider=({children})=>{
             type:"HOME_UPDATE",
             payload:{
                 details:"React MultiPage Website",
-                image:"../images/hero.svg"
+                image:{home}
             }
         })
     }
@@ -29,7 +31,7 @@ const AppProvider=({children})=>{
             type:"ABOUT_UPDATE",
             payload:{
                 details:"I am Nagaraj SP Nice to meet you.",
-                image:"../images/about1.svg"
+                image:{about}
             }
         })
     }
